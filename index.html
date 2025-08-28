@@ -188,13 +188,9 @@
           <div class="text-center">
             <!-- Espace pour image PNG du pot -->
             <div class="jar-container">
-              <img id="wildflowerJar" src="" alt="Pot Miel Fleurs Sauvages" class="jar-image" style="display: none;" />
-              <div class="jar-placeholder">
-                🍯<br />
-                <small>Glissez l'image PNG ici</small>
-              </div>
+              <img id="wildflowerJar" src="honey1.png" alt="Pot Miel Fleurs Sauvages" class="jar-image" style="display: none;" />
             </div>
-            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL FLEURS SAUVAGES</h3>
+            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL FLEURS SAUVAGES LIQUIDE</h3>
             <p class="mb-4 text-xl text-blue-700">Miel Premium Grade A d'abeilles heureuses! 🐝</p>
             <div class="blink mb-4 rounded-full bg-green-500 px-4 py-2 font-bold text-white" id="wildflowerStockDisplay">✅ 15 EN STOCK</div>
             <button onclick="showReservationForm('wildflower')" class="pulsate transform rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-8 py-4 text-2xl font-bold text-white shadow-lg transition-all hover:scale-110">ACHETER! 🛒</button>
@@ -207,14 +203,10 @@
           <div class="text-center">
             <!-- Espace pour image PNG du pot -->
             <div class="jar-container">
-              <img id="cloverJar" src="" alt="Pot Miel Trèfle" class="jar-image" style="display: none;" />
-              <div class="jar-placeholder">
-                🍯<br />
-                <small>Glissez l'image PNG ici</small>
-              </div>
+              <img id="cloverJar" src="honey2.png" alt="Pot Miel Trèfle" class="jar-image" style="display: none;" />
             </div>
-            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL DE TRÈFLE</h3>
-            <p class="mb-4 text-xl text-blue-700">Douceur de trèfle! Testé Y2K! 💻</p>
+            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL CREMEUX</h3>
+            <p class="mb-4 text-xl text-blue-700">Douceur de crème! Ultra creamy (pour ton pain) 💻</p>
             <div class="blink mb-4 rounded-full bg-orange-500 px-4 py-2 font-bold text-white" id="cloverStockDisplay">⚠️ PLUS QUE 3!</div>
             <button onclick="showReservationForm('clover')" class="pulsate transform rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-8 py-4 text-2xl font-bold text-white shadow-lg transition-all hover:scale-110">ACHETER! 🛒</button>
           </div>
@@ -300,10 +292,10 @@
               function animateStock() {
                   const counter = document.getElementById('stock-counter');
                   const totalStock = stockData.wildflower + stockData.clover + stockData.manuka;
-                  let count = 0;
+                  let count = 8730;
 
                   const interval = setInterval(() => {
-                      count++;
+                      count--;
                       counter.textContent = count + ' POTS';
 
                       if (count >= totalStock) {
