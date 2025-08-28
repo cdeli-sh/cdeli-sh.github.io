@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍯 PARADIS DU MIEL 2K - LE MEILLEUR MIEL DU WEB! 🍯</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+      body {
+          font-family: 'Comic Neue', cursive;
+          background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #dda0dd);
+          background-size: 400% 400%;
+          animation: gradientShift 3s ease infinite;
+      }
+
+      @keyframes gradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+
+      .blink {
+          animation: blinker 0.8s linear infinite;
+      }
+
+      @keyframes blinker {
+          50% { opacity: 0; }
+      }
+
+      .bounce-in {
+          animation: bounceIn 1s ease-out;
+      }
+
+      @keyframes bounceIn {
+          0% { transform: scale(0.3); opacity: 0; }
+          50% { transform: scale(1.05); }
+          70% { transform: scale(0.9); }
+          100% { transform: scale(1); opacity: 1; }
+      }
+
+      .rotate {
+          animation: rotation 2s infinite linear;
+      }
+
+      @keyframes rotation {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(359deg); }
+      }
+
+      .wobble {
+          animation: wobble 2s ease-in-out infinite;
+      }
+
+      @keyframes wobble {
+          0%, 100% { transform: rotate(0deg); }
+          25% { transform: rotate(5deg); }
+          75% { transform: rotate(-5deg); }
+      }
+
+      .pulsate {
+          animation: pulsate 1.5s ease-in-out infinite;
+      }
+
+      @keyframes pulsate {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+      }
+
+      .marquee {
+          animation: marquee 15s linear infinite;
+      }
+
+      @keyframes marquee {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+      }
+
+      .neon-text {
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff6b6b, 0 0 20px #ff6b6b;
+      }
+
+      .price-tag {
+          background: linear-gradient(45deg, #ffff00, #ffd700);
+          transform: rotate(-15deg);
+          box-shadow: 3px 3px 0px #000, 6px 6px 0px #ff6b6b;
+      }
+
+      .jar-container {
+          width: 200px;
+          height: 250px;
+          background: linear-gradient(45deg, #ffeaa7, #fdcb6e);
+          border: 4px dashed #2d3436;
+          border-radius: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 20px auto;
+          position: relative;
+          overflow: hidden;
+      }
+
+      .jar-placeholder {
+          font-size: 48px;
+          color: #636e72;
+          text-align: center;
+      }
+
+      .jar-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 10px;
+      }
+
+      .admin-panel {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: rgba(0,0,0,0.9);
+          color: white;
+          padding: 20px;
+          border-radius: 10px;
+          border: 3px solid #00ff00;
+          max-width: 300px;
+          z-index: 1000;
+      }
+
+      .reservation-form {
+          background: linear-gradient(45deg, #ff9ff3, #54a0ff);
+          border: 5px solid #ff6b6b;
+          border-radius: 20px;
+          padding: 30px;
+          margin: 20px auto;
+          max-width: 500px;
+          box-shadow: 0 0 20px rgba(255,107,107,0.5);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <!-- Étoiles flottantes -->
+    <div class="rotate fixed top-10 left-10 text-4xl text-yellow-400">⭐</div>
+    <div class="rotate fixed top-20 right-20 text-3xl text-pink-400">✨</div>
+    <div class="wobble fixed bottom-20 left-20 text-5xl text-purple-400">🌟</div>
+    <div class="rotate fixed right-10 bottom-10 text-4xl text-green-400">💫</div>
+
+    <!-- Texte défilant -->
+    <div class="overflow-hidden bg-red-600 py-2 text-white">
+      <div class="marquee text-2xl font-bold">🔥 BIENVENUE AU PARADIS DU MIEL 2K! 🔥 MIEL FRAIS DIRECT DE LA RUCHE! 🍯 OFFRE LIMITÉE! 🔥 MIEL COMPATIBLE AVEC LINUX! 🍯</div>
+    </div>
+
+    <!-- En-tête -->
+    <header class="bounce-in py-8 text-center">
+      <h1 class="neon-text wobble mb-4 text-8xl font-bold text-yellow-400">🍯 PARADIS DU MIEL 🍯</h1>
+      <p class="blink text-3xl font-bold text-pink-300">✨ LE MIEL LE PLUS DÉLICIEUX DU WORLD WIDE WEB! ✨</p>
+      <div class="mt-4 text-2xl text-white">
+        <span class="pulsate rounded-full bg-red-600 px-4 py-2">FONDÉ EN 2023</span>
+        <span class="pulsate mx-4 rounded-full bg-blue-600 px-4 py-2">100% PAS VEGAN</span>
+        <span class="pulsate rounded-full bg-green-600 px-4 py-2">100% PAS BIO</span>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="mb-8 flex justify-center space-x-4">
+      <button class="pulsate transform rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 text-xl font-bold text-white shadow-lg transition-all hover:scale-110">🏠 ACCUEIL</button>
+      <button class="pulsate transform rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 text-xl font-bold text-white shadow-lg transition-all hover:scale-110">🍯 BOUTIQUE MIEL</button>
+      <button class="pulsate transform rounded-full bg-gradient-to-r from-green-500 to-lime-500 px-6 py-3 text-xl font-bold text-white shadow-lg transition-all hover:scale-110">📞 CONTACT</button>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4">
+      <!-- Affichage des stocks -->
+      <div class="mb-12 text-center">
+        <h2 class="neon-text wobble mb-4 text-6xl font-bold text-red-500">🔥 STOCK ACTUEL DE MIEL 🔥</h2>
+        <div class="inline-block rounded-lg border-4 border-yellow-400 bg-black p-6">
+          <div class="blink text-5xl font-bold text-green-400" id="stock-counter">Chargement...</div>
+          <p class="mt-2 text-2xl text-yellow-300">POTS EN STOCK!</p>
+        </div>
+      </div>
+
+      <!-- Grille de produits -->
+      <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <!-- Produit 1 -->
+        <div class="border-rainbow bounce-in relative rounded-3xl border-8 bg-gradient-to-br from-yellow-200 to-orange-300 p-6 shadow-2xl">
+          <div class="price-tag pulsate absolute -top-4 -right-4 rounded-lg border-4 border-black px-6 py-3 text-3xl font-bold text-black">24,99€</div>
+          <div class="text-center">
+            <!-- Espace pour image PNG du pot -->
+            <div class="jar-container">
+              <img id="wildflowerJar" src="" alt="Pot Miel Fleurs Sauvages" class="jar-image" style="display: none;" />
+              <div class="jar-placeholder">
+                🍯<br />
+                <small>Glissez l'image PNG ici</small>
+              </div>
+            </div>
+            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL FLEURS SAUVAGES</h3>
+            <p class="mb-4 text-xl text-blue-700">Miel Premium Grade A d'abeilles heureuses! 🐝</p>
+            <div class="blink mb-4 rounded-full bg-green-500 px-4 py-2 font-bold text-white" id="wildflowerStockDisplay">✅ 15 EN STOCK</div>
+            <button onclick="showReservationForm('wildflower')" class="pulsate transform rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-8 py-4 text-2xl font-bold text-white shadow-lg transition-all hover:scale-110">ACHETER! 🛒</button>
+          </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="border-rainbow bounce-in relative rounded-3xl border-8 bg-gradient-to-br from-green-200 to-blue-300 p-6 shadow-2xl">
+          <div class="price-tag pulsate absolute -top-4 -right-4 rounded-lg border-4 border-black px-6 py-3 text-3xl font-bold text-black">34,99€</div>
+          <div class="text-center">
+            <!-- Espace pour image PNG du pot -->
+            <div class="jar-container">
+              <img id="cloverJar" src="" alt="Pot Miel Trèfle" class="jar-image" style="display: none;" />
+              <div class="jar-placeholder">
+                🍯<br />
+                <small>Glissez l'image PNG ici</small>
+              </div>
+            </div>
+            <h3 class="mb-2 text-3xl font-bold text-purple-800">MIEL DE TRÈFLE</h3>
+            <p class="mb-4 text-xl text-blue-700">Douceur de trèfle! Testé Y2K! 💻</p>
+            <div class="blink mb-4 rounded-full bg-orange-500 px-4 py-2 font-bold text-white" id="cloverStockDisplay">⚠️ PLUS QUE 3!</div>
+            <button onclick="showReservationForm('clover')" class="pulsate transform rounded-full bg-gradient-to-r from-red-500 to-pink-500 px-8 py-4 text-2xl font-bold text-white shadow-lg transition-all hover:scale-110">ACHETER! 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire de réservation -->
+      <div id="reservationForm" class="reservation-form" style="display: none;">
+        <h3 class="neon-text mb-6 text-center text-4xl font-bold text-white">🍯 RÉSERVER UN POT 🍯</h3>
+        <div class="rounded-lg bg-white p-6">
+          <div class="mb-4">
+            <label class="mb-2 block text-lg font-bold text-purple-800">Produit sélectionné:</label>
+            <div id="selectedProduct" class="text-2xl font-bold text-red-600"></div>
+          </div>
+          <div class="mb-4">
+            <label class="mb-2 block text-lg font-bold text-purple-800">Votre nom:</label>
+            <input type="text" id="customerName" class="w-full rounded-lg border-4 border-purple-400 p-3 text-xl" placeholder="Entrez votre nom" />
+          </div>
+          <div class="mb-4">
+            <label class="mb-2 block text-lg font-bold text-purple-800">Email:</label>
+            <input type="email" id="customerEmail" class="w-full rounded-lg border-4 border-purple-400 p-3 text-xl" placeholder="votre@email.com" />
+          </div>
+          <div class="mb-4">
+            <label class="mb-2 block text-lg font-bold text-purple-800">Téléphone:</label>
+            <input type="tel" id="customerPhone" class="w-full rounded-lg border-4 border-purple-400 p-3 text-xl" placeholder="0123456789" />
+          </div>
+          <div class="mb-6">
+            <label class="mb-2 block text-lg font-bold text-purple-800">Quantité:</label>
+            <select id="quantity" class="w-full rounded-lg border-4 border-purple-400 p-3 text-xl">
+              <option value="1">1 pot</option>
+              <option value="2">2 pots</option>
+              <option value="3">3 pots</option>
+              <option value="4">4 pots</option>
+              <option value="5">5 pots</option>
+            </select>
+          </div>
+          <div class="flex space-x-4">
+            <button onclick="submitReservation()" class="flex-1 transform rounded-lg bg-green-500 px-6 py-3 text-xl font-bold text-white transition-all hover:scale-105">✅ RÉSERVER</button>
+            <button onclick="hideReservationForm()" class="flex-1 transform rounded-lg bg-red-500 px-6 py-3 text-xl font-bold text-white transition-all hover:scale-105">❌ ANNULER</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Témoignages -->
+      <div class="mb-12 rounded-3xl border-8 border-yellow-400 bg-gradient-to-r from-purple-400 to-pink-400 p-8">
+        <h2 class="neon-text wobble mb-8 text-center text-5xl font-bold text-white">💬 TÉMOIGNAGES CLIENTS 💬</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div class="rounded-2xl border-4 border-black bg-white p-6">
+            <p class="mb-2 text-2xl font-bold text-purple-800">"MEILLEUR MIEL DE MA VIE!!!"</p>
+            <p class="text-lg">Ce miel est si bon que mon ordinateur n'a pas planté en l'an 2000! 💻✨</p>
+            <p class="text-right font-bold text-pink-600">- AmoureuseduMiel2000</p>
+          </div>
+          <div class="rounded-2xl border-4 border-black bg-white p-6">
+            <p class="mb-2 text-2xl font-bold text-purple-800">"5 ÉTOILES!!!"</p>
+            <p class="text-lg">Mes abeilles ont approuvé ce message! 🐝🐝🐝</p>
+            <p class="text-right font-bold text-pink-600">- ApiculteurPro99</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-black py-8 text-center text-white">
+      <div class="neon-text mb-4 text-4xl font-bold text-yellow-400">🍯 PARADIS DU MIEL 🍯</div>
+      <p class="blink text-2xl text-pink-300">© 2023-2025 Tous droits réservés</p>
+      <div class="mt-4">
+        <span class="wobble text-6xl">🐝</span>
+        <span class="rotate mx-4 text-4xl">⭐</span>
+        <span class="wobble text-6xl">🍯</span>
+      </div>
+    </footer>
+
+    <script>
+              // Données des stocks (vous pouvez les modifier ici facilement)
+              let stockData = {
+                  wildflower: 15,
+                  clover: 3,
+              };
+
+              let selectedProductType = '';
+
+              // Animation du compteur de stock
+              function animateStock() {
+                  const counter = document.getElementById('stock-counter');
+                  const totalStock = stockData.wildflower + stockData.clover + stockData.manuka;
+                  let count = 0;
+
+                  const interval = setInterval(() => {
+                      count++;
+                      counter.textContent = count + ' POTS';
+
+                      if (count >= totalStock) {
+                          clearInterval(interval);
+                          counter.classList.add('text-yellow-400');
+                      }
+                  }, 50);
+              }
+
+              // Mettre à jour l'affichage des stocks
+              function updateStockDisplay() {
+                  document.getElementById('wildflowerStockDisplay').textContent =
+                      stockData.wildflower > 0 ? `✅ ${stockData.wildflower} EN STOCK` : '❌ RUPTURE DE STOCK';
+
+                  document.getElementById('cloverStockDisplay').textContent =
+                      stockData.clover > 0 ?
+                      (stockData.clover <= 3 ? `⚠️ PLUS QUE ${stockData.clover}!` : `✅ ${stockData.clover} EN STOCK`)
+                      : '❌ RUPTURE DE STOCK';
+
+                  document.getElementById('manukaStockDisplay').textContent =
+                      stockData.manuka > 0 ? `✅ ${stockData.manuka} EN STOCK` : '❌ RUPTURE DE STOCK';
+              }
+
+              // Afficher le formulaire de réservation
+              function showReservationForm(productType) {
+                  selectedProductType = productType;
+                  const form = document.getElementById('reservationForm');
+                  const productDisplay = document.getElementById('selectedProduct');
+
+                  const productNames = {
+                      wildflower: 'MIEL FLEURS SAUVAGES - 24,99€',
+                      clover: 'MIEL DE TRÈFLE - 34,99€',
+                  };
+
+                  productDisplay.textContent = productNames[productType];
+                  form.style.display = 'block';
+                  form.scrollIntoView({ behavior: 'smooth' });
+              }
+
+              // Masquer le formulaire de réservation
+              function hideReservationForm() {
+                  document.getElementById('reservationForm').style.display = 'none';
+              }
+
+              // Soumettre la réservation
+              function submitReservation() {
+                  const name = document.getElementById('customerName').value;
+                  const email = document.getElementById('customerEmail').value;
+                  const phone = document.getElementById('customerPhone').value;
+                  const quantity = document.getElementById('quantity').value;
+
+                  if (!name || !email || !phone) {
+                      alert('⚠️ Veuillez remplir tous les champs!');
+                      return;
+                  }
+
+                  // Vérifier si assez de stock
+                  if (stockData[selectedProductType] < quantity) {
+                      alert('❌ Stock insuffisant pour cette quantité!');
+                      return;
+                  }
+
+                  // Réduire le stock
+                  stockData[selectedProductType] -= parseInt(quantity);
+
+                  // Mettre à jour l'affichage
+                  updateStockDisplay();
+                  animateStock();
+
+                  // Afficher la confirmation
+                  alert(`✅ Réservation confirmée!
+
+      📧 Nom: ${name}
+      📧 Email: ${email}
+      📱 Téléphone: ${phone}
+      🍯 Produit: ${document.getElementById('selectedProduct').textContent}
+      📦 Quantité: ${quantity}
+
+      Nous vous contacterons bientôt! 🎉`);
+
+                  // Réinitialiser le formulaire
+                  document.getElementById('customerName').value = '';
+                  document.getElementById('customerEmail').value = '';
+                  document.getElementById('customerPhone').value = '';
+                  document.getElementById('quantity').value = '1';
+                  hideReservationForm();
+              }
+
+              // Gestion drag & drop pour les images
+              function setupImageDragDrop() {
+                  const jarContainers = [
+                      { id: 'wildflowerJar', container: document.querySelector('#wildflowerJar').parentElement },
+                      { id: 'cloverJar', container: document.querySelector('#cloverJar').parentElement },
+                      { id: 'manukaJar', container: document.querySelector('#manukaJar').parentElement }
+                  ];
+
+                  jarContainers.forEach(({ id, container }) => {
+                      container.addEventListener('dragover', (e) => {
+                          e.preventDefault();
+                          container.style.background = 'linear-gradient(45deg, #00ff00, #00ffff)';
+                      });
+
+                      container.addEventListener('dragleave', () => {
+                          container.style.background = 'linear-gradient(45deg, #ffeaa7, #fdcb6e)';
+                      });
+
+                      container.addEventListener('drop', (e) => {
+                          e.preventDefault();
+                          const files = e.dataTransfer.files;
+
+                          if (files.length > 0 && files[0].type.startsWith('image/')) {
+                              const reader = new FileReader();
+                              reader.onload = (e) => {
+                                  const img = document.getElementById(id);
+                                  img.src = e.target.result;
+                                  img.style.display = 'block';
+                                  container.querySelector('.jar-placeholder').style.display = 'none';
+                              };
+                              reader.readAsDataURL(files[0]);
+                          }
+
+                          container.style.background = 'linear-gradient(45deg, #ffeaa7, #fdcb6e)';
+                      });
+                  });
+              }
+
+              // Initialisation
+              window.addEventListener('load', () => {
+                  setTimeout(animateStock, 1000);
+                  updateStockDisplay();
+                  setupImageDragDrop();
+              });
+
+              // Style pour bordure arc-en-ciel
+              const style = document.createElement('style');
+              style.textContent = `
+                  .border-rainbow {
+                      border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red) 1;
+                      animation: rainbow-border 2s linear infinite;
+                  }
+
+                  @keyframes rainbow-border {
+                      0% { filter: hue-rotate(0deg); }
+                      100% { filter: hue-rotate(360deg); }
+                  }
+              `;
+              document.head.appendChild(style);
+    </script>
+  </body>
+</html>
